@@ -13,3 +13,7 @@
 
 ## 05.11.2026
 - Used Claude to find the right W,H,X and Y numbers to make the details in product card, header and footer to fit perfectly.
+
+## 06.11.2026
+- Used Claude to get step by step help to build the home page in Figma for desktop and mobile version. The scaling took a lot of effort to get right since there are two different screens. Claude helped me to get the right scale for grid auto layout, scaling, detach instance and hug contents.
+- I Also used Claude to find quicker ways to reuse the product I already made, but to scale them right for the frame. I decided myself to reuse my logo from the style guide, just had to reshape it a little. 
