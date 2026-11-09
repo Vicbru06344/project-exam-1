@@ -22,4 +22,4 @@
 - Claude picked up that I had forgotten the discount price, tags, sharing button and reviews so I added these today.
 - I named all the color boxes in the style guide, also lined up the page frame so it would look more professional.
 - Started day 6: disgned the login page for desktop (email, password, login button and link to register).
-  
+- Also designed the login page for mobile, and fixed layout problems in Figma with Claude's help. 
