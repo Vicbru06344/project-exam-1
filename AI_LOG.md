@@ -23,3 +23,6 @@
 - I named all the color boxes in the style guide, also lined up the page frame so it would look more professional.
 - Started day 6: disgned the login page for desktop (email, password, login button and link to register).
 - Also designed the login page for mobile, and fixed layout problems in Figma with Claude's help. 
+## 17.11.2026
+- Used Claude as a step-by-step guide in Figma for the checkout, confirmation and prototype setup. All design work was done by me in Figma.
+  
