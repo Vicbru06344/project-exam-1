@@ -21,8 +21,11 @@
 - Used Claude for step-by-step help to design the product page in Figma (desktop and mobile)
 - Claude picked up that I had forgotten the discount price, tags, sharing button and reviews so I added these today.
 - I named all the color boxes in the style guide, also lined up the page frame so it would look more professional.
-- Started day 6: disgned the login page for desktop (email, password, login button and link to register).
+- Started day 6: designed the login page for desktop (email, password, login button and link to register).
 - Also designed the login page for mobile, and fixed layout problems in Figma with Claude's help. 
 ## 17.11.2026
 - Used Claude as a step-by-step guide in Figma for the checkout, confirmation and prototype setup. All design work was done by me in Figma.
-  
+## 18.11.2026
+- Used Claude to help sort all the files in VS Code.
+- Used Claude to teach me keyboard shortcuts so it would be easier for me to find the different lines to change from old code to new code in the different index.html, Find and Replace (Cmd + F) in VS Code.
+- I wrote the code myself and used Claude to check for errors. 
