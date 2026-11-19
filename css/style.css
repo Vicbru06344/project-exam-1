@@ -103,6 +103,18 @@ header>a {
     text-decoration: none;
 }
 
+/* Terracotta dot in the logo, as a circle */
+.logo-dot {
+    display: inline-block;
+    width: 0.25em;
+    height: 0.25em;
+    margin-left: 0.05em;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    color: transparent;
+    overflow: hidden;
+}
+
 nav ul {
     display: flex;
     gap: var(--space-md);
