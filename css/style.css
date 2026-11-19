@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap");
+
+:root {
+    /*colorcodes*/
+    --color-primary: #2F4A3A;
+    --color-primary-hover: #233A2D;
+    --color-secondary: #A8553A;
+    --color-background: #FAF6EF;
+    --color-white: #FFFFFF;
+    --color-text: #2A2A26;
+    --color-text-muted: #6B6B63;
+    --color-border: #E4DDD2;
+    --color-error: #B3261E;
+    --color-error-bg: #FBEAE9;
+    --color-success: #2E7D4F;
+    --color-success-bg: #EAF4EE;
+
+    --font-heading: "Playfair Display", serif;
+    --font-body: "Inter", sans-serif;
+
+    /*textsize*/
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.25rem;
+    --font-size-h3: 1.5rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
+
+    /*clothingsize/spacing*/
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+
+    /*round corners*/
+    --radius: 8px;
+}
+
+*,
+*::before,
+*::after { 
+    /* before and after with star(*) means all elements, all tags in HTML-en (pseudo-element)*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
