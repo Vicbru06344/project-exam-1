@@ -1,5 +1,7 @@
+/*downloads Google Fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap");
 
+/*standard variables*/
 :root {
     /*colorcodes*/
     --color-primary: #2F4A3A;
@@ -46,6 +48,7 @@
 }
 
 img {
+    /*picture always stays in the box*/
     max-width: 100%;
     display: block;
 }
@@ -57,8 +60,9 @@ body {
     background-color: var(--color-white);
     line-height: 1.5;
     display: flex;
-    flex-direction: column; /*puts header, main and
-     footer under eachother(kolonne)*/
+    /*puts header, main and
+     footer under each other(kolonne)*/
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -66,6 +70,19 @@ h1,
 h2,
 h3 {
     font-family: var(--font-heading);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
 }
 
 /*Header*/
@@ -76,13 +93,13 @@ header {
     padding: var(--space-sm) var(--space-xl);
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
-
 }
 
-header > a {
+header>a {
     font-family: var(--font-heading);
     font-size: var(--font-size-h3);
     color: var(--color-primary);
+    /*"none"removes the underline*/
     text-decoration: none;
 }
 
@@ -101,16 +118,55 @@ nav a {
 nav a:hover {
     color: var(--color-secondary);
 }
+
 /*Main*/
 main {
     /* (flex:1)pushes the footer all the way down*/
-    flex: 1; 
+    flex: 1;
     padding: var(--space-lg) var(--space-xl);
 }
+
 /*Footer*/
 footer {
     padding: var(--space-lg) var(--space-xl);
     background-color: var(--color-primary);
     color: var(--color-white);
     font-size: var(--font-size-small);
+}
+
+/*Buttons*/
+.btn {
+    display: inline-block;
+    padding: 0.875rem var(--space-md);
+    font-family: var(--font-body);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+    color: var(--color-text);
+    background-color: var(--color-white);
+    border-color: var(--color-text);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-background);
+}
+
+.btn:disabled {
+    color: var(--color-text-muted);
+    background-color: var(--color-border);
+    border-color: var(--color-border);
+    cursor: not-allowed;
 }
