@@ -1,9 +1,9 @@
-/*downloads Google Fonts*/
+/* downloads Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap");
 
-/*standard variables*/
+/* standard variables */
 :root {
-    /*colorcodes*/
+    /* colorcodes */
     --color-primary: #2F4A3A;
     --color-primary-hover: #233A2D;
     --color-secondary: #A8553A;
@@ -20,35 +20,35 @@
     --font-heading: "Playfair Display", serif;
     --font-body: "Inter", sans-serif;
 
-    /*textsize*/
+    /* textsize */
     --font-size-h1: 3rem;
     --font-size-h2: 2.25rem;
     --font-size-h3: 1.5rem;
     --font-size-body: 1rem;
     --font-size-small: 0.875rem;
 
-    /*clothingsize/spacing*/
+    /* clothingsize/spacing */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
     --space-lg: 2rem;
     --space-xl: 4rem;
 
-    /*round corners*/
+    /* round corners */
     --radius: 8px;
 }
 
 *,
 *::before,
 *::after {
-    /* before and after with star(*) means all elements, all tags in HTML-en (pseudo-element)*/
+    /* before and after with star(*) means all elements, all tags in HTML-en (pseudo-element) */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 img {
-    /*picture always stays in the box*/
+    /* picture always stays in the box */
     max-width: 100%;
     display: block;
 }
@@ -60,8 +60,8 @@ body {
     background-color: var(--color-white);
     line-height: 1.5;
     display: flex;
-    /*puts header, main and
-     footer under each other(kolonne)*/
+    /* puts header, main and
+     footer under each other(kolonne) */
     flex-direction: column;
     min-height: 100vh;
 }
@@ -99,7 +99,7 @@ header>a {
     font-family: var(--font-heading);
     font-size: var(--font-size-h3);
     color: var(--color-primary);
-    /*"none"removes the underline*/
+    /* "none"removes the underline */
     text-decoration: none;
 }
 
@@ -119,14 +119,14 @@ nav a:hover {
     color: var(--color-secondary);
 }
 
-/*Main*/
+/* Main */
 main {
     /* (flex:1)pushes the footer all the way down*/
     flex: 1;
     padding: var(--space-lg) var(--space-xl);
 }
 
-/*Footer*/
+/* Footer */
 footer {
     padding: var(--space-lg) var(--space-xl);
     background-color: var(--color-primary);
@@ -134,7 +134,7 @@ footer {
     font-size: var(--font-size-small);
 }
 
-/*Buttons*/
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 0.875rem var(--space-md);
@@ -171,7 +171,7 @@ footer {
     cursor: not-allowed;
 }
 
-/*Forms*/
+/* Forms */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -212,3 +212,55 @@ select:focus {
 .input-error {
     border-color: var(--color-error);
 }
+
+/* Product card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1/1; /* img becomes square */
+    object-fit: cover;
+    background-color: var(--color-background);
+}
+
+.product-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+}
+
+.product-card h3 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+}
+
+.rating {
+    font-size: var(--font-size-small);
+    color: var(--color-secondary);
+}
+
+.price {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-body);
+}
+
+.old-price {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    text-decoration: line-through; /* strikes through the text (old price) */
+}
+
+.product-card .btn {
+    width: 100%;
+    text-align: center;
+}
+
