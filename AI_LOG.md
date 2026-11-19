@@ -28,4 +28,11 @@
 ## 18.11.2026
 - Used Claude to help sort all the files in VS Code.
 - Used Claude to teach me keyboard shortcuts so it would be easier for me to find the different lines to change from old code to new code in the different index.html, Find and Replace (Cmd + F) in VS Code.
-- I wrote the code myself and used Claude to check for errors. 
+- I wrote the code myself and used Claude to check for errors.
+## 19.11.2026
+- Ticket 8, Used Claude to sort the different colors, I used the same color system as in Agency delivery. I wrote the CSS and comments myself.
+- Ticket 9, Used Claude to get the perfect frame on mobile and desktop. The site is now live.
+- Used Claude to learn how to use Find and Replace in the whole project (Cmd + Shift + F) to add the logo dot on all 7 pages at once.
+- Ticket 10,(started): Used Claude to explain fetch, async/await and for loops. I fetched the products from the Noroff API and showed all 25 titles in the console.
+- Used Claude to find a bug in my code: I had written js= instead of src= in the script tag, so the JavaScript did not load.
+- I used the console (Cmd + Option + C) to check that it worked after the fix.
