@@ -266,6 +266,14 @@ select:focus {
     text-align: center;
 }
 
+/* Product grid (home page) */
+#product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
 /* Tablet and desktop */
 /* The rules only apply when the screen is at least 768px wide*/
 @media (min-width: 768px) {
@@ -276,5 +284,17 @@ select:focus {
     main,
     footer {
         padding: var(--space-lg) var(--space-xl);
+    }
+    #product-grid {
+        /* repeat(2, 1fr) = 2 equal columns */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #product-grid {
+       /* repeat(4, 1fr) = 4 equal columns */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
