@@ -90,7 +90,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--space-sm) var(--space-xl);
+    padding: var(--space-sm) var(--space-sm);
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
 }
@@ -123,12 +123,12 @@ nav a:hover {
 main {
     /* (flex:1)pushes the footer all the way down*/
     flex: 1;
-    padding: var(--space-lg) var(--space-xl);
+    padding: var(--space-lg) var(--space-sm);
 }
 
 /* Footer */
 footer {
-    padding: var(--space-lg) var(--space-xl);
+    padding: var(--space-lg) var(--space-sm);
     background-color: var(--color-primary);
     color: var(--color-white);
     font-size: var(--font-size-small);
@@ -184,7 +184,7 @@ label {
     font-weight: 500;
 }
 
-input, 
+input,
 select {
     padding: 0.75rem var(--space-sm);
     font-family: inherit;
@@ -225,7 +225,8 @@ select:focus {
 
 .product-card img {
     width: 100%;
-    aspect-ratio: 1/1; /* img becomes square */
+    /* 1/1 img becomes square */
+    aspect-ratio: 1/1;
     object-fit: cover;
     background-color: var(--color-background);
 }
@@ -256,7 +257,8 @@ select:focus {
 .old-price {
     font-size: var(--font-size-small);
     color: var(--color-text-muted);
-    text-decoration: line-through; /* strikes through the text (old price) */
+    text-decoration: line-through;
+    /* strikes through the text (old price) */
 }
 
 .product-card .btn {
@@ -264,3 +266,15 @@ select:focus {
     text-align: center;
 }
 
+/* Tablet and desktop */
+/* The rules only apply when the screen is at least 768px wide*/
+@media (min-width: 768px) {
+    header {
+        padding: var(--space-sm) var(--space-xl);
+    }
+
+    main,
+    footer {
+        padding: var(--space-lg) var(--space-xl);
+    }
+}
