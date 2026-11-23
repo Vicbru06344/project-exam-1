@@ -14,8 +14,10 @@ async function getProducts() {
         grid.innerHTML += `
         <article class="product-card">      
         <img src="${product.image.url}" alt="${product.title}">
+        <div class="product-card-body">
         <h3>${product.title}</h3>
         <p class="price">${product.discountedPrice} kr</p>
+        </div>
         </article>
         `;
 
