@@ -3,10 +3,12 @@ const API_URL = "https://v2.api.noroff.dev/online-shop";
 
 //Gets the product from the API
 async function getProducts() {
+    const grid = document.querySelector("#product-grid"); /* find the right box */ 
+    grid.innerHTML = `<p class="loading">Laster produkter ...</p>`; /* loading before pictues */
     const response = await fetch(API_URL);
     const result = await response.json();
     const products = result.data;
-    const grid = document.querySelector("#product-grid"); /* find the right box */
+    grid.innerHTML = "";
 
     for (const product of products.slice(0, 12)) { /* we only need 12 products */
 
