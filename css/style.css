@@ -315,7 +315,7 @@ select:focus {
     border-radius: var(--radius);
 }
 
-/* Arrows (50% positions the arrow in the center of the page (aspect makes the picture a little wider then tall */
+/* Arrows: absolute + top 50% places them in the middle of the carousel */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -329,12 +329,29 @@ select:focus {
     font-size: var(--font-size-h3);
     cursor: pointer;
 }
+
 .carousel-prev {
     left: var(--space-xs);
 }
 
 .carousel-next {
     right: var(--space-xs);
+}
+
+/* Soft fade when the product changes */
+#carousel-slide>* {
+    animation: fade-in 0.5s ease;
+}
+
+/* Fades from invisible (0) to fully visible (1) */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -349,16 +366,27 @@ select:focus {
     footer {
         padding: var(--space-lg) var(--space-xl);
     }
+
     #product-grid {
         /* repeat(2, 1fr) = 2 equal columns */
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #carousel-slide {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carousel-text,
+    .carousel img {
+        flex: 1;
     }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
     #product-grid {
-       /* repeat(4, 1fr) = 4 equal columns */
+        /* repeat(4, 1fr) = 4 equal columns */
         grid-template-columns: repeat(4, 1fr);
     }
 }
