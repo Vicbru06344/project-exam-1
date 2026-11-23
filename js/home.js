@@ -10,10 +10,12 @@ async function getProducts() {
 
     for (const product of products.slice(0, 12)) { /* we only need 12 products */
 
-        /* Put this in a box (grid) */ /* Connects to css design */
+        /* Put this in a box (grid) */ /* Connects to css design */ /* ahref makes the product clickable*/
         grid.innerHTML += `
-        <article class="product-card">      
-        <img src="${product.image.url}" alt="${product.title}">
+        <article class="product-card">
+        <a href="product/index.html?id=${product.id}">   
+        <img src="${product.image.url}" alt="${product.title}"> 
+        </a>
         <div class="product-card-body">
         <h3>${product.title}</h3>
         <p class="price">${product.discountedPrice} kr</p>
