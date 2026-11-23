@@ -3,17 +3,18 @@ const API_URL = "https://v2.api.noroff.dev/online-shop";
 
 //Gets the product from the API
 async function getProducts() {
-    const grid = document.querySelector("#product-grid"); /* find the right box */ 
+    const grid = document.querySelector("#product-grid"); /* find the right box */
     grid.innerHTML = `<p class="loading">Laster produkter ...</p>`; /* loading before pictues */
-    const response = await fetch(API_URL);
-    const result = await response.json();
-    const products = result.data;
-    grid.innerHTML = "";
+    try {
+        const response = await fetch(API_URL);
+        const result = await response.json();
+        const products = result.data;
+        grid.innerHTML = "";
 
-    for (const product of products.slice(0, 12)) { /* we only need 12 products */
+        for (const product of products.slice(0, 12)) { /* we only need 12 products */
 
-        /* Put this in a box (grid) */ /* Connects to css design */ /* ahref makes the product clickable*/
-        grid.innerHTML += `
+            /* Put this in a box (grid) */ /* Connects to css design */ /* ahref makes the product clickable*/
+            grid.innerHTML += `
         <article class="product-card">
         <a href="product/index.html?id=${product.id}">   
         <img src="${product.image.url}" alt="${product.title}"> 
@@ -25,6 +26,9 @@ async function getProducts() {
         </article>
         `;
 
+        }
+    } catch (error) {
+        grid.innerHTML = `<p class="error-text">Noe gikk galt. Vi klarte ikke å hente produktene. Prøv igjen senere.</p>`;
     }
 }
 
