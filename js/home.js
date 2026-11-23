@@ -56,6 +56,28 @@ async function getProducts() {
 
 getProducts();
 
+// Arrows with products
+const prevButton = document.querySelector(".carousel-prev");
+const nextButton = document.querySelector(".carousel-next");
+
+// Arrow goes to next product, or back to the first one
+nextButton.addEventListener("click", () => {
+    currentSlide = currentSlide +1;
+    if (currentSlide >= carouselProducts.length) {
+        currentSlide = 0;
+    }
+    showSlide();
+});
+
+// Arrow goes to the previus product, or to the last one from the first, +1=goes to the next, -1=goes back
+prevButton.addEventListener("click", () => {
+    currentSlide = currentSlide -1;
+    if (currentSlide <0) {
+        currentSlide = carouselProducts.length -1;
+    }
+    showSlide();
+});
+
 
 
 
