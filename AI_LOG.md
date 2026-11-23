@@ -36,3 +36,9 @@
 - Ticket 10,(started): Used Claude to explain fetch, async/await and for loops. I fetched the products from the Noroff API and showed all 25 titles in the console.
 - Used Claude to find a bug in my code: I had written js= instead of src= in the script tag, so the JavaScript did not load.
 - I used the console (Cmd + Option + C) to check that it worked after the fix.
+## 23.11.2026
+- Today I worked on the home page: showing products from the API in a grid, and building a carousel with three featured products. I used Claude as a step-by-step guide. Claude explained what each part of the code does, and I wrote all the code myself in VS Code.
+- Claude explained fetch with async/await, try/catch for error messages, innerHTML, and how to use addEventListener on the carousel arrows.
+- Claude helped me find bugs, like spelling mistakes in names (carousel vs carosel), missing curly brackets, and calling the function the wrong way.
+- For the CSS, Claude explained how position absolute and translateY place the arrows in the middle, and how @keyframes makes the fade animation.
+- What I learned: how to get data from an API and show it on the page, and how to make buttons change content with JavaScript.
