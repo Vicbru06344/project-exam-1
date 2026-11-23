@@ -1,19 +1,38 @@
 // Address to the Noroff API
 const API_URL = "https://v2.api.noroff.dev/online-shop";
+// 3 products in the carosel, which one is shown now //
+let carouselProducts = [];
+let currentSlide = 0;
 
-//Gets the product from the API
+//Shows one product in the carousel //
+function showSlide() {
+    const slide = document.querySelector("#carousel-slide");
+    const product = carouselProducts[currentSlide];
+
+    slide.innerHTML = `
+    <div class="carousel-text">
+    <h2>${product.title}</h2>
+    <p>${product.description}</p>
+    <a href="product/index.html?id=${product.id}" class="btn">Se produktet</a>
+    </div>
+    <img src="${product.image.url}" alt="${product.title}"> `;
+
+}
+
+
+//Gets the product from the API //
 async function getProducts() {
-    const grid = document.querySelector("#product-grid"); /* find the right box */
-    grid.innerHTML = `<p class="loading">Laster produkter ...</p>`; /* loading before pictues */
+    const grid = document.querySelector("#product-grid"); // find the right box //
+    grid.innerHTML = `<p class="loading">Laster produkter ...</p>`; // loading before pictues //
     try {
         const response = await fetch(API_URL);
         const result = await response.json();
         const products = result.data;
         grid.innerHTML = "";
 
-        for (const product of products.slice(0, 12)) { /* we only need 12 products */
+        for (const product of products.slice(0, 12)) { // we only need 12 products //
 
-            /* Put this in a box (grid) */ /* Connects to css design */ /* ahref makes the product clickable*/
+            // Put this in a box (grid) // // Connects to css design // // ahref makes the product clickable //
             grid.innerHTML += `
         <article class="product-card">
         <a href="product/index.html?id=${product.id}">   
@@ -25,8 +44,11 @@ async function getProducts() {
         </div>
         </article>
         `;
-
         }
+        //Fill the carousel with 3 products and then shows the first one //
+        carouselProducts = products.slice(12, 15);
+        showSlide();
+
     } catch (error) {
         grid.innerHTML = `<p class="error-text">Noe gikk galt. Vi klarte ikke å hente produktene. Prøv igjen senere.</p>`;
     }
