@@ -42,3 +42,5 @@
 - Claude helped me find bugs, like spelling mistakes in names (carousel vs carosel), missing curly brackets, and calling the function the wrong way.
 - For the CSS, Claude explained how position absolute and translateY place the arrows in the middle, and how @keyframes makes the fade animation.
 - What I learned: how to get data from an API and show it on the page, and how to make buttons change content with JavaScript.
+## 25.11.20.26
+-I started writing the reflection report, and Claude helped me translate my text from Norwegian to English. So far I have written section 1 (Project management).
