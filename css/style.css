@@ -370,6 +370,39 @@ select:focus {
     font-size: var(--font-size-small);
 }
 
+/* Product page, makes space between title, price, tags and buttons */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+/* Product page: reviews */ 
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-xl);
+}
+
+/* Own box for each review */
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+}
+
+.review h3 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: 500;
+}
+
 /* Tablet and desktop */
 /* The rules only apply when the screen is at least 768px wide*/
 @media (min-width: 768px) {
