@@ -25,6 +25,13 @@ async function getProduct() {
         const stars = Math.round(product.rating);
         const starsHTML = `<p
         class="rating">${"★".repeat(stars)}${"☆".repeat(5 - stars)} (${product.rating})</p>`;
+        
+        // Small label for each tag
+        let tagsHTML = "";
+        for (const tag of product.tags) {
+            tagsHTML += `<span class="tag">${tag}</span>`;
+        }
+
         container.innerHTML = `
     <img src="${product.image.url}" alt="${product.title}">
     <div class="product-info">
@@ -32,6 +39,7 @@ async function getProduct() {
         ${starsHTML}
         ${priceHTML}
         <p>${product.description}</p>
+        <div class="tags">${tagsHTML}</div>
     </div>
         `;
     } catch (error) {

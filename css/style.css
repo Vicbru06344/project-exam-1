@@ -354,6 +354,21 @@ select:focus {
     }
 }
 
+/* Product page: tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.tag {
+    padding: 0.25rem var(--space-xs);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-background);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-small);
+}
 
 /* Tablet and desktop */
 /* The rules only apply when the screen is at least 768px wide*/
