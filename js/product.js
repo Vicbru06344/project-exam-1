@@ -58,6 +58,11 @@ async function getProduct() {
         ${priceHTML}
         <p>${product.description}</p>
         <div class="tags">${tagsHTML}</div>
+
+    <button class="btn btn-secondary" id="share-btn">Del
+    produktet</button>
+
+    <p class="help-text" id="share-message" aria-live="polite"></p>
     </div>
 
         <section class="reviews">
@@ -65,6 +70,15 @@ async function getProduct() {
             ${reviewsHTML}
         </section>
         `;
+
+        // Copies the link to the product when the share button is clicked
+        const shareButton = document.querySelector("#share-btn");
+        const shareMessage = document.querySelector("#share-message");
+        shareButton.addEventListener("click", async () => {
+            await navigator.clipboard.writeText(window.location.href);
+            shareMessage.textContent = "Lenke kopiert!";
+        });
+
 
     } catch (error) {
         container.innerHTML = `<p class="error-text">Noe gikk galt. Vi klarte ikke å hente produktet. Prøv igjen senere.</p>`;
