@@ -13,15 +13,27 @@ async function getProduct() {
         const response = await fetch(`${API_URL}/${id}`);
         const result = await response.json();
         const product = result.data;
-        // Shows the product on the page
+
+        // Shows the old price too if the product is on sale
+        let priceHTML = `<p class="price">${product.price} kr</p>`;
+        if (product.discountedPrice < product.price) {
+            priceHTML = `<p
+            class="price">${product.discountedPrice} kr <span 
+            class="old-price">${product.price} kr</span></p>`;  
+        }
+        // Shows the rating as stars (rounded to a whole number)
+        const stars = Math.round(product.rating);
+        const starsHTML = `<p
+        class="rating">${"★".repeat(stars)}${"☆".repeat(5 - stars)} (${product.rating})</p>`;
         container.innerHTML = `
-<img src="${product.image.url}" alt="${product.title}">
-<div class="product-info">
-    <h1>${product.title}</h1>
-    <p class="price">${product.discountedPrice} kr</p>
-    <p>${product.description}</p>
+    <img src="${product.image.url}" alt="${product.title}">
+    <div class="product-info">
+        <h1>${product.title}</h1>
+        ${starsHTML}
+        ${priceHTML}
+        <p>${product.description}</p>
     </div>
-    `;
+        `;
     } catch (error) {
         container.innerHTML = `<p class="error-text">Noe gikk galt. Vi klarte ikke å hente produktet. Prøv igjen senere.</p>`;
     }
