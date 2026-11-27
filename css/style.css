@@ -379,7 +379,7 @@ select:focus {
     margin-top: var(--space-md);
 }
 
-/* Product page: reviews */ 
+/* Product page: reviews */
 .reviews {
     display: flex;
     flex-direction: column;
@@ -401,6 +401,11 @@ select:focus {
     font-family: var(--font-body);
     font-size: var(--font-size-body);
     font-weight: 500;
+}
+
+#product-details img {
+    width: 100%;
+    border-radius: var(--radius);
 }
 
 /* Tablet and desktop */
@@ -428,6 +433,23 @@ select:focus {
     .carousel-text,
     .carousel img {
         flex: 1;
+    }
+
+    /* to place the picture on the left and the text on the right */
+    #product-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl);
+        align-items: start;
+    }
+
+    .reviews {
+        grid-column: 1 / -1;
+        margin-top: 0;
+    }
+
+    .product-info {
+        margin-top: 0;
     }
 }
 
